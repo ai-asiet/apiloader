@@ -42,13 +42,14 @@
                 border-radius: 10px;
             }
         }
-        /* Desktop: fixed-size widget */
+        /* Desktop: widget with dynamic height based on viewport */
         @media (min-width: 1024px) {
             #chat-popup {
                 width: 450px;
-                height: 700px;
-                bottom: 11%;
-                right: 8%;
+                height: 90vh;       /* 70% of the viewport height */
+                max-height: 700px;  /* Optional maximum height */
+                bottom: 5vh;       /* Using viewport units for spacing */
+                right: 5%;
                 left: auto;
                 border-radius: 10px;
             }
@@ -95,12 +96,14 @@
 
     let popupContainer;  // The chat popup container
     let sideVector;      // The left PNG element (desktop only)
+    let resizeObserver;  // Observer for resizing the chat popup
 
     // Update side vector position relative to the chat popup
     function updateSideVectorPosition() {
         if (popupContainer && sideVector) {
             const rect = popupContainer.getBoundingClientRect();
-            const offset = 450; // Adjust this offset as needed
+            // Calculate offset to vertically center the side vector relative to the popup container
+            const offset = (popupContainer.offsetHeight / 2) - (sideVector.offsetHeight / 2)+120;
             sideVector.style.top = (rect.top + offset) + "px";
             sideVector.style.left = (rect.left - sideVector.offsetWidth - 10) + "px";
         }
@@ -128,7 +131,7 @@
             popupContainer.id = "chat-popup";
             popupContainer.innerHTML = `
                 <div id="chat-controls">
-                    <button id="minimize-chat"></button>
+                    <button id="minimize-chat">–</button>
                     <button id="close-chat">&times;</button>
                 </div>
                 <iframe id="chat-iframe" src="${botConfig.iframeUrl}" style="width: 100%; height: 100%; border-radius:10px;"></iframe>
@@ -145,6 +148,7 @@
                     document.body.removeChild(sideVector);
                     sideVector = null;
                 }
+                // Re-add the chat icon
                 document.body.appendChild(chatIcon);
             });
 
@@ -155,8 +159,17 @@
                 if (sideVector) {
                     sideVector.style.display = "none";
                 }
+                // Re-add the chat icon
                 document.body.appendChild(chatIcon);
             });
+
+            // Initialize ResizeObserver (if available) to adjust side vector on size changes
+            if (window.ResizeObserver) {
+                resizeObserver = new ResizeObserver(() => {
+                    updateSideVectorPosition();
+                });
+                resizeObserver.observe(popupContainer);
+            }
         } else {
             popupContainer.style.display = "block";
         }
