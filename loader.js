@@ -4,9 +4,8 @@
         backendUrl: "https://your-backend-url.com", // Your chatbot backend
         iconUrl: "./front.png", // Main chat icon URL (PNG vector)
         audioUrl: "music.mp3", // Audio file to play on click
-        iframeUrl: "https://cbv1-961251512.asia-south1.run.app/", // Chatbot iframe URL
+        iframeUrl: "https://www.adishankara.ac.in/", // Chatbot iframe URL
     };
-
 
     // Inject responsive CSS styles into the document head
     const style = document.createElement('style');
@@ -17,7 +16,7 @@
             background-color: #fff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            border-radius: 10px;
+            border-radius: 50px;
             transition: all 0.3s ease;
         }
         /* Mobile: full-screen */
@@ -28,17 +27,17 @@
                 top: 0;
                 left: 0;
                 right: 0;
-                bottom: 10%;
+                bottom: 8%;
                 border-radius: 0;
             }
         }
         /* Laptop style: larger, centered popup */
         @media (min-width: 769px) and (max-width: 1023px) {
             #chat-popup {
-                width: 90%;
-                height: 80%;
-                bottom: 10%;
-                left: 5%;
+                width: 80%;
+                height: 90%;
+                bottom: 8%;
+                left: 12%;
                 right: auto;
                 border-radius: 10px;
             }
@@ -46,10 +45,10 @@
         /* Desktop: fixed-size widget */
         @media (min-width: 1024px) {
             #chat-popup {
-                width: 400px;
-                height: 500px;
-                bottom: 13%;
-                right: 10px;
+                width: 450px;
+                height: 700px;
+                bottom: 11%;
+                right: 8%;
                 left: auto;
                 border-radius: 10px;
             }
@@ -88,28 +87,24 @@
     `;
     document.head.appendChild(style);
 
-
     // Create the main chat icon element
     const chatIcon = document.createElement("img");
     chatIcon.src = botConfig.iconUrl;
     chatIcon.id = "chat-icon";
     document.body.appendChild(chatIcon);
 
-
     let popupContainer;  // The chat popup container
     let sideVector;      // The left PNG element (desktop only)
-
 
     // Update side vector position relative to the chat popup
     function updateSideVectorPosition() {
         if (popupContainer && sideVector) {
             const rect = popupContainer.getBoundingClientRect();
-            const offset = 300; // Adjust this offset as needed
+            const offset = 450; // Adjust this offset as needed
             sideVector.style.top = (rect.top + offset) + "px";
             sideVector.style.left = (rect.left - sideVector.offsetWidth - 10) + "px";
         }
     }
-
 
     // Listen for fullscreen changes and window resize to update positioning
     function handleFullscreenChange() {
@@ -118,17 +113,14 @@
     document.addEventListener("fullscreenchange", handleFullscreenChange);
     window.addEventListener("resize", updateSideVectorPosition);
 
-
     // On clicking the main chat icon
     chatIcon.addEventListener("click", function () {
         // Play audio when the icon is clicked
         const audio = new Audio(botConfig.audioUrl);
         audio.play();
 
-
         // Remove the main chat icon
         chatIcon.remove();
-
 
         // Create (or show) the chat popup container with the iframe and control buttons
         if (!popupContainer) {
@@ -139,10 +131,9 @@
                     <button id="minimize-chat"></button>
                     <button id="close-chat">&times;</button>
                 </div>
-                <iframe id="chat-iframe" src="${botConfig.iframeUrl}" style="width: 100%; height: 100%; border: none;"></iframe>
+                <iframe id="chat-iframe" src="${botConfig.iframeUrl}" style="width: 100%; height: 100%; border-radius:10px;"></iframe>
             `;
             document.body.appendChild(popupContainer);
-
 
             // Attach event listeners for the control buttons
             document.getElementById("close-chat").addEventListener("click", function () {
@@ -157,7 +148,6 @@
                 document.body.appendChild(chatIcon);
             });
 
-
             document.getElementById("minimize-chat").addEventListener("click", function () {
                 if (popupContainer) {
                     popupContainer.style.display = "none";
@@ -170,7 +160,6 @@
         } else {
             popupContainer.style.display = "block";
         }
-
 
         // For non-mobile devices, create/show the left side vector.
         if (window.innerWidth > 768) {
