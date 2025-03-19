@@ -103,7 +103,7 @@
         if (popupContainer && sideVector) {
             const rect = popupContainer.getBoundingClientRect();
             // Calculate offset to vertically center the side vector relative to the popup container
-            const offset = (popupContainer.offsetHeight / 2) - (sideVector.offsetHeight / 2)+120;
+            const offset = (popupContainer.offsetHeight / 2) - (sideVector.offsetHeight / 2)+150;
             sideVector.style.top = (rect.top + offset) + "px";
             sideVector.style.left = (rect.left - sideVector.offsetWidth - 10) + "px";
         }
