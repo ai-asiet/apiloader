@@ -4,7 +4,7 @@
         backendUrl: "https://your-backend-url.com", // Your chatbot backend
         iconUrl: "./front.png", // Main chat icon URL (PNG vector)
         audioUrl: "music.mp3", // Audio file to play on click
-        iframeUrl: "https://www.adishankara.ac.in/", // Chatbot iframe URL
+        iframeUrl: "https://chatbot-test-961251512.asia-south2.run.app/", // Chatbot iframe URL
     };
 
     // Inject responsive CSS styles into the document head
