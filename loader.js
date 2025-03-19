@@ -48,7 +48,7 @@
                 width: 450px;
                 height: 90vh;       /* 70% of the viewport height */
                 max-height: 700px;  /* Optional maximum height */
-                bottom: 10vh;       /* Using viewport units for spacing */
+                bottom: 8vh;       /* Using viewport units for spacing */
                 right: 5%;
                 left: auto;
                 border-radius: 10px;
