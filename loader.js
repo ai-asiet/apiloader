@@ -46,7 +46,7 @@
         @media (min-width: 1024px) {
             #chat-popup {
                 width: 450px;
-                height: 500px;
+                height: 650px;
                 bottom: 11%;
                 right: 8%;
                 left: auto;
