@@ -2,7 +2,7 @@
     const botConfig = {
         botId: "cm2g51wzj2i0kn8bkqdvvnyx9", // Bot ID
         backendUrl: "https://your-backend-url.com", // Your chatbot backend
-        iconUrl: "./front.png", // Main chat icon URL (PNG vector)
+        iconUrl: "https://apiloader.vercel.app/front.png", // Main chat icon URL (PNG vector)
         audioUrl: "music.mp3", // Audio file to play on click
         iframeUrl: "https://chatbot-test-961251512.asia-south2.run.app/", // Chatbot iframe URL
     };
@@ -178,7 +178,7 @@
         if (window.innerWidth > 768) {
             if (!sideVector) {
                 sideVector = document.createElement("img");
-                sideVector.src = "side.png"; // Your PNG vector URL
+                sideVector.src = "https://apiloader.vercel.app/side.png"; // Your PNG vector URL
                 sideVector.id = "side-vector";
                 sideVector.onload = updateSideVectorPosition;
                 document.body.appendChild(sideVector);
