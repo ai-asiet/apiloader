@@ -2,7 +2,7 @@
     const botConfig = {
         botId: "cm2g51wzj2i0kn8bkqdvvnyx9",
         backendUrl: "https://your-backend-url.com",
-        iconUrl: "icon cc st (1).png",
+        iconUrl: "front.png",
         audioUrl: "music.mp3",
          
          
