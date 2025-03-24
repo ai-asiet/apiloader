@@ -2,7 +2,7 @@
     const botConfig = {
         botId: "cm2g51wzj2i0kn8bkqdvvnyx9",
         backendUrl: "https://your-backend-url.com",
-        iconUrl: "front.png",
+        iconUrl: "icon cc st (1).png",
         audioUrl: "music.mp3",
         iframeUrl: "https://thomas007123.github.io/smaple/",
     };
@@ -328,7 +328,7 @@
         if (window.innerWidth > 768) {
             if (!sideVector) {
                 sideVector = document.createElement("img");
-                sideVector.src = "side.png";
+                sideVector.src = "icon cc sd (1).png";
                 sideVector.id = "side-vector";
                 sideVector.onload = updateSideVectorPosition;
                 document.body.appendChild(sideVector);
