@@ -4,9 +4,7 @@
         backendUrl: "https://your-backend-url.com",
         iconUrl: "icon cc st (1).png",
         audioUrl: "music.mp3",
-         backendUrl: "https://your-backend-url.com", // Your chatbot backend
-         iconUrl: "https://apiloader.vercel.app/front.png", // Main chat icon URL (PNG vector)
-         audioUrl: "music.mp3", // Audio file to play on click
+         
          
          iframeUrl: "https://ct-961251512.asia-south1.run.app/", // Chatbot iframe URL
      };
