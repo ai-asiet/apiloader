@@ -6,7 +6,7 @@
         audioUrl: "music.mp3",
          
          
-         iframeUrl: "https://ct-961251512.asia-south1.run.app/", // Chatbot iframe URL
+         iframeUrl: "https://ft-961251512.asia-south2.run.app", // Chatbot iframe URL
      };
  
      // Inject responsive CSS styles into the document head
