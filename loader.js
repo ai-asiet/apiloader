@@ -136,7 +136,7 @@
                      <button id="minimize-chat">–</button>
                      <button id="close-chat">&times;</button>
                  </div>
-                 <iframe id="chat-iframe" src="${botConfig.iframeUrl}" style="width: 100%; height: 100%; border-radius:10px;"></iframe>
+                 <iframe id="chat-iframe" src="${botConfig.iframeUrl}" style="width: 100%; height: 100%; border-radius:10px;"allow="microphone"></iframe>
              `;
              document.body.appendChild(popupContainer);
  
