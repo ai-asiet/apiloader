@@ -4,7 +4,7 @@
         backendUrl: "https://your-backend-url.com",
         iconUrl: "icon cc st bnd.png",
         audioUrl: "music.mp3",
-        iframeUrl: "https://ct-459671676510.asia-south2.run.app/",
+        iframeUrl: "https://cb-459671676510.asia-south1.run.app",
     };
 
     // Load confetti library if not already loaded
