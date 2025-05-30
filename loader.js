@@ -2,7 +2,7 @@
     const botConfig = {
         botId: "cm2g51wzj2i0kn8bkqdvvnyx9",
         backendUrl: "https://your-backend-url.com",
-        iconUrl: "https://apiloader.vercel.app/icon%20cc%20sd%20(1).png",
+        iconUrl: "https://apiloader.vercel.app/icon%20cc%20st%20bnd.png",
         audioUrl: "music.mp3",
         iframeUrl: "https://cb-459671676510.asia-south1.run.app",
     };
@@ -348,7 +348,7 @@
         if (window.innerWidth > 768) {
             if (!sideVector) {
                 sideVector = document.createElement("img");
-                sideVector.src = "icon cc sd bnd.png";
+                sideVector.src = "https://apiloader.vercel.app/icon%20cc%20sd%20(1).png";
                 sideVector.id = "side-vector";
                 sideVector.onload = updateSideVectorPosition;
                 document.body.appendChild(sideVector);
