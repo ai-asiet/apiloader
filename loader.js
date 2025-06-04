@@ -348,7 +348,7 @@
         if (window.innerWidth > 768) {
             if (!sideVector) {
                 sideVector = document.createElement("img");
-                sideVector.src = "https://apiloader.vercel.app/icon%20cc%20sd%20(1).png";
+                sideVector.src = "https://ai-asiet.github.io/apiloader/sd.png";
                 sideVector.id = "side-vector";
                 sideVector.onload = updateSideVectorPosition;
                 document.body.appendChild(sideVector);
