@@ -2,7 +2,7 @@
     const botConfig = {
         botId: "cm2g51wzj2i0kn8bkqdvvnyx9",
         backendUrl: "https://your-backend-url.com",
-        iconUrl: "https://apiloader.vercel.app/icon%20cc%20st%20bnd.png",
+        iconUrl: "https://ai-asiet.github.io/apiloader/icon%20cc%20st%20bnd.png",
         audioUrl: "music.mp3",
         iframeUrl: "https://fc-6np5.onrender.com",
     };
