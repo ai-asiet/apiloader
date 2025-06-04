@@ -4,7 +4,7 @@
         backendUrl: "https://your-backend-url.com",
         iconUrl: "https://apiloader.vercel.app/icon%20cc%20st%20bnd.png",
         audioUrl: "music.mp3",
-        iframeUrl: "https://cb-459671676510.asia-south1.run.app",
+        iframeUrl: "https://fc-gdfv.onrender.com/",
     };
 
     // Load confetti library if not already loaded
