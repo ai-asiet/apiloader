@@ -4,7 +4,7 @@
         backendUrl: "https://your-backend-url.com",
         iconUrl: "https://ai-asiet.github.io/apiloader/icon%20cc%20st%20bnd.png",
         audioUrl: "music.mp3",
-        iframeUrl: "https://fc-6np5.onrender.com",
+        iframeUrl: "https://jo-459671676510.us-central1.run.app",
     };
 
     // Load confetti library if not already loaded
