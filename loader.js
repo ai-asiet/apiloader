@@ -148,6 +148,7 @@
             position: fixed;
             height: 250px;
             width: auto;
+            z-index: 999;
         }
         /* Responsive Design */
         @media (max-width: 480px) {
