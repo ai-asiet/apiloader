@@ -1,18 +1,99 @@
 <!doctype html>
-<title>Site Maintenance</title>
-<style>
-  body { text-align: center; padding: 150px; }
-  h1 { font-size: 50px; }
-  body { font: 20px Helvetica, sans-serif; color: #333; }
-  article { display: block; text-align: left; width: 650px; margin: 0 auto; }
-  a { color: #dc8100; text-decoration: none; }
-  a:hover { color: #333; text-decoration: none; }
-</style>
-
-<article>
-    <h1>We&rsquo;ll be back soon!</h1>
-    <div>
-        <p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment. </p>
-        <p>&mdash; The Team</p>
-    </div>
-</article>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Maintenance</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body { 
+            text-align: center; 
+            padding: 20px;
+            font: 20px Helvetica, sans-serif; 
+            color: #333;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        h1 { 
+            font-size: clamp(32px, 7vw, 50px);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        article { 
+            display: block; 
+            text-align: left; 
+            width: 100%;
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        p {
+            font-size: clamp(16px, 4vw, 20px);
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        a { 
+            color: #dc8100; 
+            text-decoration: none; 
+        }
+        
+        a:hover { 
+            color: #333; 
+            text-decoration: none; 
+        }
+        
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            article {
+                padding: 15px;
+                text-align: center;
+            }
+            
+            h1 {
+                margin-bottom: 15px;
+            }
+        }
+        
+        /* Small mobile styles */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            article {
+                padding: 10px;
+            }
+        }
+        
+        /* Large screen styles */
+        @media (min-width: 1200px) {
+            body {
+                padding: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h1>We&rsquo;ll be back soon!</h1>
+        <div>
+            <p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment.</p>
+            <p>&mdash; The Team</p>
+        </div>
+    </article>
+</body>
+</html>
