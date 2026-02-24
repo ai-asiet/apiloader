@@ -4,7 +4,7 @@
         backendUrl: "https://your-backend-url.com",
         iconUrl: "https://ai-asiet.github.io/apiloader/icon%20cc%20st%20bnd.png",
         audioUrl: "music.mp3",
-        iframeUrl: "https://gh-420774607279.europe-west1.run.app",
+        iframeUrl: "https://vyanix-bot.online",
         // iframeUrl: "https://apiloader.vercel.app/maintenance.html",
     };
 
